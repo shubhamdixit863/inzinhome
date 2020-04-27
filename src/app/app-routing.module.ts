@@ -19,7 +19,17 @@ const routes: Routes = [
 
       { 
         path: 'about', 
-        loadChildren: () => import('./views/about/about.module').then(m => m.AboutModule),
+        loadChildren: () => import('./views/aboutpage/aboutpage.module').then(m => m.AboutpageModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'brands', 
+        loadChildren: () => import('./views/brands/brands.module').then(m => m.BrandsModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'category', 
+        loadChildren: () => import('./views/categories/categories.module').then(m => m.CategoriesModule),
         data: { title: 'Admin'} 
       }
     ]
