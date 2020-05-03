@@ -31,7 +31,33 @@ const routes: Routes = [
         path: 'category', 
         loadChildren: () => import('./views/categories/categories.module').then(m => m.CategoriesModule),
         data: { title: 'Admin'} 
+      },
+      { 
+        path: 'vendor', 
+        loadChildren: () => import('./views/vendor/vendor.module').then(m => m.VendorModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'dealer', 
+        loadChildren: () => import('./views/dealer/dealer.module').then(m => m.DealerModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'distributor', 
+        loadChildren: () => import('./views/distributor/distributor.module').then(m => m.DistributorModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'tags', 
+        loadChildren: () => import('./views/tags/tags.module').then(m => m.TagsModule),
+        data: { title: 'Admin'} 
+      },
+      { 
+        path: 'login', 
+        loadChildren: () => import('./views/login/login.module').then(m => m.LoginModule),
+        data: { title: 'Admin'} 
       }
+
     ]
   },
 
